@@ -7,6 +7,17 @@ font-size: 50px;
 text-decoration: none;
 margin: auto;
 }
+.barilo{
+  
+  color: #2c2834;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.incluye{
+  background-color: mintcream;
+  text-align: left;
+  border-radius: 80px;
+}
 .App {
   text-align: center;
 }
