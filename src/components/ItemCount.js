@@ -12,7 +12,7 @@ return (
     <div>
     <button onClick = {handeClickSumar} >Sumar </button>
     <p>0{cantidad.Click}</p>
-    <button onClick = {handeClickResta}>Restar </button>
+    <button onClick = {handeClickResta}> Restar </button>
     </div>
 )
 }

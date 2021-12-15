@@ -1,5 +1,5 @@
 import React from 'react';
-import logotipo from '../assets/logotipo.png'
+import logotipo from '../assets/img/logotipo.png'
 import CartWidget from './CartWidget'
 
 function NavBar() {
