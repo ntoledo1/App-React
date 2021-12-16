@@ -1,31 +1,28 @@
 import React, {useState} from "react";
 
-function ItemCount (){
-let [cantidad, setCantidad] = useState({Click:0})
+function ItemCount ({stock, initial, onAdd}){
+ 
+let [cantidad, setCantidad] = useState(initial);
+
 const handeClickSumar=()=>{
-    setCantidad({ Click: ++cantidad.Click});
-  };
+    if (cantidad < stock && stock !==0){setCantidad(cantidad +1);}}
+
 const handeClickResta=()=>{
-    setCantidad({ Click: --cantidad.Click});
-  }; 
+    if (cantidad > 0) {setCantidad(cantidad -1)}}
+
+function restablecer(){
+  setCantidad(0)}
+
 return (
     <div>
-    <button onClick = {handeClickSumar} >Sumar </button>
-    <p>0{cantidad.Click}</p>
+      <p>cantidad de Stock:{cantidad}</p>
+    <button onClick = {handeClickSumar}> Sumar </button>
     <button onClick = {handeClickResta}> Restar </button>
+    <button onClick = {restablecer}> Restablecer </button>
+    <button onClick = {onAdd}> Agregar </button>
     </div>
 )
 }
-/*
-function ItemCount ([stock, initial, onAdd]){
-return (
-    <div>
-    <button>Sumar </button>
-    <p>0</p>
-    <button>Restar </button>
-    </div>
-    <ItemCount stock="5" initial="1" />
-)//desarrollo de logica
-}*/
+
 
 export default ItemCount;
